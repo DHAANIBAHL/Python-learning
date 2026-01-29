@@ -1,0 +1,9 @@
+# This is an expression - a piece of code that produces a value.
+print(5 * '*')
+
+# Getting user input
+name = input("Your name pls: ")
+color = input("Your favourite color: ")
+
+# Printing the result
+print(name + " likes color " + color)
