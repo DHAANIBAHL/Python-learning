@@ -1,0 +1,18 @@
+number = 10  # Global variable
+
+def print_number():
+    print(number)  # Access global variable
+
+def modify_number():
+    global number
+    number = 20  # Modify global variable
+
+def local_example():
+    number = 5  # Local variable
+    print(number)  # Print local variable
+
+print(number)      # Output: 10
+print_number()     # Output: 10
+modify_number()    # Output: 20
+local_example()    # Output: 5
+print(number)      # Output: 20
