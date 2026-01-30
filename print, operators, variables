@@ -1,0 +1,25 @@
+# First Class Definition (No Parameters)
+
+class ATM:
+    def __init__(self):
+        self.pin = " "
+        self.balance = 0
+
+obj = ATM()
+print(type(obj))   
+
+atm1 = ATM()      # atm1 is object of ATM class
+print(type(atm1))   
+print(atm1.pin)  # Output: " "
+print(atm1.balance)  # Output: 0
+
+# Counting chickens and eggs
+print("Let's count chickens")
+print("Hens :", 25 + 30 / 6)
+print("Roosters :", 100 - 25 * 3 % 4)
+print("Let's count eggs now")
+print(3 + 2 + 1 - 5 + 4 % 2 - 1 / 4 + 6)
+print("Is it true that 3+2 < 5-7 ?")
+print(3 + 2 < 5 - 7)
+
+# These symbols are operators
