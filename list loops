@@ -1,0 +1,26 @@
+numbers = list(range(1, 6))
+print(numbers)
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("Our first 3 players are :")
+for player in players[:3]:
+    print(player)
+
+    scores = []
+print("Let us enter scores ; ")
+# sample input: [150, 200, 120, 180, 170, 90]
+
+# take score input.
+for i in range(6):
+    score = int(input())
+    scores.append(score)
+
+# to get top 3 scores
+scores.sort(reverse=True)
+print(scores[:3])
+# output : [200, 180, 170]
+
+# set others to 0
+scores[3:] = [0, 0, 0]
+print(scores)
+# output:  [200, 180, 170, 0, 0, 0]
