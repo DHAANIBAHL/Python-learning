@@ -1,0 +1,77 @@
+# Practice Questions
+# Original list  
+fruits = ["banana", "Orange", "kiwi", "Kiwi", "cherry", "apple", "orange"]
+
+# Sort the list case-insensitively
+fruits.sort(key=str.lower)
+print("Sorted (Case Insensitive):", fruits)  # Output: ['apple', 'banana', 'cherry', 'kiwi', 'Orange']
+
+# Sort by Length
+fruits.sort(key=len)
+print("Sorted (By Length):", fruits) 
+
+# Sort the list by last letter
+fruits.sort(key=lambda x: x[-1])
+print("Sorted (By Last Letter):", fruits)
+
+# Sort the list by first letter
+fruits.sort(key=lambda x: x[0].lower())
+print("Sorted (By First Letter):", fruits)  
+
+# Original list  
+nums = [10, -5, 3, 8, -2]
+nums2 = [23, 45, 12, 67, 34]
+
+# Sort numbers in descending order
+nums2.sort(reverse=True)
+print("Sorted (Descending):", nums2)  
+
+# Sort numbers by absolute value
+nums.sort(key=abs)
+print("Sorted (By Absolute Value):", nums) 
+
+# Sort numbers by last digit
+nums2.sort(key=lambda x: x % 10)
+print("Sorted (By Last Digit):", nums2)  
+
+# Sort numbers by distance from 5
+nums.sort(key=lambda x: abs(x - 5))
+print("Sorted (By Distance from 5):", nums)   
+
+# Original list  
+nums = [3.2, 1.5, 4.8, 2.1]
+
+# Sort decimal numbers (floats)
+nums.sort()
+print("Sorted (Floats Ascending):", nums)  
+
+# Sort decimal numbers by decimal part only
+nums.sort(key=lambda x: x - int(x))
+print("Sorted (By Decimal Part):", nums)  
+
+# Original list of tuples  
+students = [("Alice", 85), ("Bob", 75), ("Charlie", 90)]
+
+# Sort list of tuples by second value
+students.sort(key=lambda x: x[1])
+print("Sorted (By Marks):", students) 
+
+# Sort list of tuples by marks (descending)
+students.sort(key=lambda x: x[1], reverse=True)
+print("Sorted (Marks Descending):", students) 
+
+# Sort by multiple conditions (first by marks, then by name)
+students.sort(key=lambda x: (x[1], x[0]))
+print("Sorted (Marks, then Name):", students)  
+
+# Original dict  
+employees = [
+    {"name": "Alice", "salary": 50000},
+    {"name": "Bob", "salary": 40000},
+    {"name": "Charlie", "salary": 60000}
+]
+
+# Sort list of dictionaries by value
+employees.sort(key=lambda x: x["salary"])
+print("Sorted (By Salary):", employees)
+
