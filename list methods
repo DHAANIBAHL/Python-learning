@@ -1,0 +1,21 @@
+# Initial list of fruits
+fruits = ["banana", "Orange", "kiwi", "cherry", "apple", "orange"]
+
+# sort() method sorts the list in place and does not return a new list or any value. 
+# Instead, it directly modifies the original list and then returns None by default.
+
+# Sort the list alphabetically (ascending order)
+fruits.sort()
+print("Sorted (Ascending):", fruits)  # Output: ['apple', 'banana', 'cherry', 'kiwi', 'Orange']
+
+# Sort the list in descending order
+fruits.sort(reverse=True)
+print("Sorted (Descending):", fruits)  # Output: ['kiwi', 'cherry', 'banana', 'apple', 'Orange']
+
+# Sort the list case-insensitively
+fruits.sort(key=str.lower)
+print("Sorted (Case Insensitive):", fruits)  # Output: ['apple', 'banana', 'cherry', 'kiwi', 'Orange']
+
+# Reverse the list
+fruits.reverse()
+print("Reversed:", fruits)  # Output: ['Orange', 'kiwi', 'cherry', 'banana', 'apple']
