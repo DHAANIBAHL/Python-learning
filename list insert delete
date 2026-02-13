@@ -1,0 +1,29 @@
+# Original list
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+print("Original:", thislist)
+
+# ADDING ITEMS TO A LIST
+# append() adds ONE element to the end
+thislist.append("orange")
+print("After append:", thislist)
+
+# extend() adds MULTIPLE elements to the end
+thislist.extend(["kiwi", "melon"])
+print("After extend:", thislist)
+
+# insert() adds an element at a specific position
+thislist.insert(1, "mango")
+print("After insert:", thislist)
+print(thislist)
+
+
+# REMOVING ITEMS
+# remove() deletes the FIRST matching value
+thislist.remove("banana")
+print(thislist)
+
+# pop() removes item at a specific index
+# It also returns the removed value
+thislist.pop()      # Removes last item
+thislist.pop(1)     # Removes 1st element
+print(thislist)
