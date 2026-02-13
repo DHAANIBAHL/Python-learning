@@ -1,0 +1,12 @@
+from array import array
+
+# Create a normal Python list
+my_list = [1, 2, 3, 4, 5]
+
+# Convert list to an array
+# Syntax: array(typecode, iterable)
+# 'i' means signed integer
+my_array = array('i', my_list)
+
+# Access elements
+print("Array from list:", my_array)
