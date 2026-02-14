@@ -1,0 +1,47 @@
+# List Comprehension
+
+# Imagine you’re a wizard 🧙‍♂️ and you need to make a custom potion (a new list) using ingredients (the elements in your original list). But here's the catch—you only want certain ingredients! Instead of going through the whole potion-making process one step at a time, you’ve got a magic spell (list comprehension) that helps you grab exactly what you want in one shot!
+
+# [expression for item in iterable if condition]
+
+
+# Let us see an example:
+# You’ve got a list of numbers and you want to get the squares of only the even numbers. 
+
+# Normal Way (a bit of a hassle):
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+squared_evens = []
+
+for num in numbers:
+    if num % 2 == 0:
+        squared_evens.append(num ** 2)
+
+print(squared_evens)
+
+# Magic Way (List Comprehension) 💫:
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+squared_evens = [num ** 2 for num in numbers if num % 2 == 0]
+print(squared_evens)
+
+# 3x3 Matrix using Nested List Comprehension
+matrix = [[i * j for i in range(1, 4)] for j in range(1, 4)]
+print("3x3 Matrix (Multiplication Table):")
+for row in matrix:
+    print(row)  # Display each row for better readability
+
+print("\n")
+
+# Cartesian Product using List Comprehension
+L1 = [1, 2, 3, 4]
+L2 = [5, 6, 7, 8]
+
+cartesian_product = [[i, j] for i in L1 for j in L2]
+print("Cartesian Product (Pairs of L1 and L2):")
+for pair in cartesian_product:
+    print(pair)  # Display each pair for clarity
+
+# List comprehension with a conditional expression is a compact way to create a new list by looping through an iterable and applying an if-else condition to each element — all in one line.
+
+# It replaces a normal for loop + if-else block.
