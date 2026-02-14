@@ -1,0 +1,34 @@
+### ✅ Zip() function
+
+zip() is a built-in Python function that combines two or more iterables (like lists, tuples, etc.) element-by-element based on their index and returns an iterator of tuples.
+
+👉 It pairs the first elements together, second elements together, third elements together, and so on.
+
+### 🧠 Key Points to Remember
+
+- zip() → pairs elements by index
+
+- Returns an iterator of tuples
+
+- Can combine 2 or more iterables
+
+- Stops at the shortest iterable
+
+# Basic Example (Two Lists)
+
+# Two lists with the same length
+L1 = [1, 2, 3, 4]
+L2 = [-1, -2, -3, -4]
+
+# zip() pairs elements index-wise:
+# Index 0 → (1, -1)
+# Index 1 → (2, -2)
+# Index 2 → (3, -3)
+# Index 3 → (4, -4)
+
+zipped = zip(L1, L2)  # zip object (iterator)
+
+# Convert to list to see the result
+print("Zipped pairs:", list(zipped))
+
+
