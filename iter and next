@@ -1,0 +1,45 @@
+## iter() and next()
+### 📌 1. iter()
+
+iter() is a built-in Python function that:
+
+Converts an iterable (like a list, tuple, string, etc.) into an iterator.
+
+An iterator is an object that:
+
+- Remembers its current position
+
+- Returns one item at a time
+
+- Moves forward each time you ask for the next value
+
+### 📌 2. next()
+
+next() is a built-in function that:
+
+- Retrieves the next item from an iterator.
+
+- Each time you call next(), it:
+
+- Returns the next value
+
+- Moves the iterator forward
+
+If there are no more items, it raises: *StopIteration*
+
+# Basic example
+
+books = ["Book 1", "Book 2", "Book 3"]
+
+# Convert the list into an iterator
+book_iterator = iter(books)
+
+# Fetch items one at a time using next()
+print(next(book_iterator))  # First item → 'Book 1'
+print(next(book_iterator))  # Second item → 'Book 2'
+print(next(book_iterator))  # Third item → 'Book 3'
+
+# What Happens If You Call next() Again?
+print(next(book_iterator))
+
+# It raises StopIteration 
