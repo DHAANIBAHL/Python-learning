@@ -1,0 +1,50 @@
+### 🟢 2️⃣ “Nested for loops appending directly”
+
+This corresponds to:
+`[[i, j] for i in L1 for j in L2]`
+
+🔍 What’s happening?
+
+* You do NOT create a new list inside the outer loop
+
+* You directly append each [i, j]
+
+* Everything goes into one single list
+cartesian_product = []
+
+for j in L2:                 # Outer loop
+    inner_list = []          # 🔥 New list created each time
+    
+    for i in L1:             # Inner loop
+        inner_list.append([i, j])
+    
+    cartesian_product.append(inner_list)  # Append whole list
+
+for x in cartesian_product:
+    print(x)
+
+
+🟢 2️⃣ “Nested for loops with inner list”
+
+This corresponds to:
+`[[[i, j] for i in L1] for j in L2]`
+
+🔍 What’s happening?
+
+* For every j
+
+* You build a separate list
+
+* Then you add that list to the main list
+
+
+cartesian_product = []
+
+for j in L2:                 # Outer loop
+    inner_list = []          # 🔥 New list created each time
+    
+    for i in L1:             # Inner loop
+        inner_list.append([i, j])
+    
+    cartesian_product.append(inner_list)  # Append whole list
+
