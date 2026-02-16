@@ -1,0 +1,19 @@
+2D Lists
+-----------------
+
+Store data in a grid or table format, where each row of the table is a separate list.
+# Example of a 2D list (3 rows and 3 columns)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# To access
+# [1]: Refers to the second row , [2]: Refers to the third element in that row 
+
+print(matrix[1][2])  # Output: 6
+
+
+matrix.append([10, 11, 12])  # Adds a new row at the end
+print(matrix)
