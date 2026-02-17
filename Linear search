@@ -1,0 +1,20 @@
+# List of elements
+myList = [10, 25, 30, 45, 50]
+
+# Element to search
+key = 30
+
+# Assume element is not found
+found = False
+
+# Loop through each element
+for item in myList:
+    if item == key:
+        found = True
+        break   # Stop searching once found
+
+# Print result
+if found:
+    print("Element found")
+else:
+    print("Element not found")
