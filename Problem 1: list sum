@@ -1,0 +1,16 @@
+# List problem 1
+# Problems on Lists
+# Problem 1: list sum
+
+n = int(input())
+myList = []
+
+for i in range (n):
+    item = int(input())
+    myList.append(item)
+print(f"The list is: {myList}")
+
+sum = 0
+for item in myList:
+    sum += item
+print(f"The sum of items in myList are: {sum}")
