@@ -1,0 +1,10 @@
+# Initialize an empty 3x3 tic-tac-toe board
+board = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+]
+
+# Display the board
+for row in board:
+    print(row)
