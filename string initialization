@@ -1,0 +1,11 @@
+Strings are Arrays
+--------------------------
+
+- Strings in Python are immutable.
+
+- We can loop through the characters in a string with a `for` loop.
+
+- String Length: To get the length of a string, use the `len()` function (a built-in function that you call).
+
+b = "Hello, World!"
+print(b[2:5])
