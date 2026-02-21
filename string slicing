@@ -1,0 +1,26 @@
+# Slice From the Start - By leaving out the start index, the range will start at the first character
+
+b = "Hello, World!"
+print(b[:5])
+
+# Slice To the End - By leaving out the end index, the range will go to the end
+print(b[2:])
+
+# Slicing
+s = 'hello world'
+print(s[6:0:-2])
+
+print(s[-1:6:-1])  # Output: 'dlrow'
+
+
+# Negative Indexing - Starts from -1 (the last element)
+print(b[-5:-2])
+
+x = 'Welcome'
+print(x[3:5])  # --> co
+
+# Reversing a string
+s = 'hello world'
+print(s[::-1])  # Reverse the string
+
+
