@@ -1,0 +1,8 @@
+s = "hello   world"
+print(s.split())      # ['hello', 'world']  (loses spaces ❌)
+print(s.split(" "))   # ['hello', '', '', 'world'] (keeps spaces ✅)
+
+s = "john's book"
+print(s.title())  # Output: "John'S Book" ❌
+s = "12abc street"
+print(s.title())  # Output: "12Abc Street" ❌
