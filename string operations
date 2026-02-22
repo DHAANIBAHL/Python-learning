@@ -1,0 +1,35 @@
+# Defining strings for demonstration
+str1 = "hello"
+str2 = "world"
+str3 = "hello world"
+
+print("=== Arithmetic Operators ===")
+# Only + (concatenation) and * (repetition) are valid
+print("str1 + str2:", str1 + str2)  # Concatenation
+print("str1 * 2:", str1 * 2)        # Repetition
+# Other arithmetic operators (-, /, %, etc.) are invalid for strings
+
+print("\n=== Relational Operators ===")
+# Comparison is lexicographical (Unicode value-based)
+print("str1 == str2:", str1 == str2)  # Equality
+print("str1 != str2:", str1 != str2)  # Inequality
+print("str1 > str2:", str1 > str2)    # Lexicographical comparison
+print("str1 < str2:", str1 < str2)    # Lexicographical comparison
+print("str1 >= str2:", str1 >= str2)  # Lexicographical comparison
+print("str1 <= str2:", str1 <= str2)  # Lexicographical comparison
+
+print("\n=== Membership Operators ===")
+# Check if a substring is in another string
+print("'hello' in str3:", "hello" in str3)    # True
+print("'world' in str3:", "world" in str3)    # True
+print("'python' not in str3:", "python" not in str3)  # True
+
+print("\n=== Logical Operators ===")
+# Logical operations with boolean expressions
+print("str1 == 'hello' and str2 == 'world':", str1 == "hello" and str2 == "world")  # Logical AND
+print("str1 == 'hello' or str2 == 'python':", str1 == "hello" or str2 == "python")  # Logical OR
+print("not (str1 == 'python'):", not (str1 == "python"))  # Logical NOT
+
+print("\n=== Bitwise Operators (Invalid for Strings) ===")
+# Bitwise operators like &, |, ^, ~ cannot be used with strings
+# Example: print(str1 & str2)  # This will raise a TypeError
