@@ -1,0 +1,100 @@
+# Splitting Data into Chunks
+# Purpose: Batch Processing in ML
+
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+chunk_size = 3
+chunks = []  # This will store each chunk of data
+
+for i in range(0, len(data), chunk_size):
+    # Take a slice of data from 'i' to 'i + chunk_size' and add it to chunks
+    chunks.append(data[i:i + chunk_size])
+
+print(chunks)  # Output: [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
+#------------------------------------------------------------------------------------------------
+
+#Removing Every Nth Element
+'''  Purpose:- Reduce Data at Regular Intervals
+- Create Sampling Patterns
+- Remove Irregular Data Points
+- Prepare Data for Visualization
+'''
+
+data = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+n = 3
+
+# Create a new list with every 3rd element removed
+filtered_data = [data[i] for i in range(len(data)) if (i + 1) % n != 0]
+
+print(filtered_data)  # Output: [10, 20, 40, 50, 70, 80]
+
+#------------------------------------------------------------------------------------------------
+
+#Rotate List Elements
+''' - Use slicing to divide the list into two parts.
+     -Concatenate the two slices in rotated order.
+'''
+# Given data and positions
+data = [1, 2, 3, 4, 5]
+positions = 2
+
+# Split and recombine the list
+rotated_data = data[positions:] + data[:positions]
+
+# Print the result
+print(rotated_data)  # Output: [3, 4, 5, 1, 2]
+
+#------------------------------------------------------------------------------------------------
+
+# Skip-Slicing
+#Description: Extract every other element, starting from the second element.
+data = [3, 8, 12, 17, 24, 30, 34]
+
+# Using slicing directly to get every other element, starting from index 1
+result = data[1::2]
+
+print(result)  # Output: [8, 17, 30]
+
+#------------------------------------------------------------------------------------------------
+
+#Slice-Based Data Analysis
+
+'''Description: Calculate weekly average temperatures.
+'''
+# Given temperatures list
+temps = [70, 72, 68, 65, 74, 73, 71, 69, 75, 72, 70, 68, 67, 76]
+
+# Create an empty list to store averages
+averages = []
+
+# Iterate over the list in chunks of 7 days
+for i in range(0, len(temps), 7):
+    week = temps[i:i + 7]  # Take a slice of 7 days  
+    
+    # Check if the week has 7 days
+    if len(week) == 7:
+        # Calculate the average for the week, round to 2 decimals, and add to averages
+        averages.append(round(sum(week) / 7, 2))
+
+# Print the weekly averages
+print(averages)  # Output: [70.43, 70.86]
+
+#------------------------------------------------------------------------------------------------
+
+#Top K Frequent Elements
+#Description: Find the K most frequent words and display them in order.
+
+from collections import Counter
+
+words = ["apple", "banana", "apple", "orange", "banana", "apple"]
+K = 2
+
+# Step 1: Count the frequency of each word
+freq = Counter(words)
+
+# Step 2: Sort words by frequency (descending), and alphabetically if frequencies are equal
+sorted_words = sorted(freq.keys(), key=lambda x: (-freq[x], x))
+
+# Step 3: Get the top K frequent words
+top_k = sorted_words[:K]
+
+print(top_k)  # Output: ["apple", "banana"]
